@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CONFIGURATION VersionMark="3.4.1.12">
+  <Parameters>
+    <NotifyEndLicenseDays />
+    <ImportantVocabulariesSync />
+    <ImportantVocabulariesSyncTime />
+    <VocabulariesSyncTime />
+    <SharedVocabulariesDir />
+    <RebuildSharedLocalStorage />
+    <RebuildUserLocalStorage />
+    <TasksEnabled />
+    <TimerInterval />
+    <ShowUnreadMailCount />
+    <ShowMsgComments />
+    <DocLogicalDeleting />
+    <NotCountFreeDays />
+    <MaxRecipientNumber />
+    <AutoSearchMode />
+    <AutoSearchRecordCount />
+    <AutoSearchInterval />
+    <DefaultExecTime />
+    <ExecFromCurrentDate />
+    <SignFormat />
+    <TakeOffActive />
+    <ExitPrompt />
+    <NoShowSelectJournalWnd />
+    <ERCDocNReadOnly />
+  </Parameters>
+  <LoginForm Login="test001" Server="DSUD-TEST3" Servers=";DSUD-TEST3" OfflineSupported="True" ConnectionParametersVisible="True" VersionMark="3.4.1.12" />
+  <SecurityConfigurationTemplate />
+  <SecurityConfiguration />
+  <SecurityConfiguration369482 />
+</CONFIGURATION>

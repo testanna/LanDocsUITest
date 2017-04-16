@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CONFIGURATION VersionMark="3.4.1.12">
+  <Style StyleName="Skin" SkinName="Office 2010 Silver" VersionMark="3.4.1.12" />
+  <SpellCheckerOptions SpellCheckerEnabled="True" VersionMark="3.4.1.12" />
+  <SecurityConfiguration369482 ContainerName="test001_t3" ContainerPrefix="native" ForceLD2ImportCommandTime="2017-04-11T06:05:22.6040594Z" VersionMark="3.4.1.12" />
+  <PersistentDeputy Id="-1" VersionMark="3.4.1.12" />
+  <NOMENCLATUREPANEL />
+  <JOURNALTREE />
+  <MAINFORM Left="-1" Top="-1" Height="469" Width="1388" IsMaximized="True" QuickAccessToolBar_Position="Default" QuickAccessToolBar_Commands="" barCheckMainTree="True" barCheckGroupPanel="False" splitContainerNavPane="350" ShowNewInstrsNotifies="True" NotifyInstrsSpeed="7000" NotifyInstrsTransparency="20" LastNotifiedInstrShowed="680196" DocumentPreviewPlace="1" InstructionPreviewPlace="0" TaskPreviewPlace="0" PreviewLocationX="0" PreviewLocationY="273" VersionMark="3.4.1.12" />
+  <Skins />
+  <QuickAccessToolBar />
+  <TREESETTINGS ActiveGroup="0" FocusedNode="6364bcae-caa1-461a-b89c-8904b46ce706" ExpandedNodes="" GroupsHeight="232" NavBarGroupsCountVisible="-1" NavBarGroupVisibleDocuments="True" NavBarGroupVisibleInstructions="True" NavBarGroupVisibleVocabularies="True" NavBarGroupVisibleTask="True" NavBarGroupVisibleAll="True" VersionMark="3.4.1.12" />
+  <CURRENTUSER_DRAFTS_1 Widths="OverTime=80;StartDate=122;ReadDate=75;ReportText=88;CreateDateTime=75;MailSubject=75;VersionCount=50;MailCreatorName=94;Priority=75;StateName=74;ReportCreatorName=75;BaseAnnotation=75;BaseDocumentNumber=351;ReportERCName=328;ResultName=75;MailInitiatorName=75;Category=75;ExecAuditorName=75;RespReceiver=75;HasNotes=75;MailText=379;MailReceiverName=172;ExecutionEndDate=112;MailAuditorName=75;ReportCreatedDateTime=75;InstructionTypeName=231" Visible="StateName;OverTime;InstructionTypeName;MailCreatorName;MailReceiverName;MailText;StartDate;ExecutionEndDate;BaseDocumentNumber;ReportText;ReportERCName" Sorting="CreateDateTime=Descending" Groping="" Locking="" AutoFilterRow="" TreeNodeSortView="0" IsAppliedDateFilter="True" DatePeriod="3" StartDate="2017-01-12T00:00:00" EndDate="2017-04-11T00:00:00" DaysCount="0" IsAppliedReadFilter="False" AreReadItems="False" IsAppliedUserFilter="False" UserFilterID="0" UserFilterName="" IsUserFilterParametrized="False" UserFilterParameters="" IsFilterPanelCollapsed="False" ShowLogicalDeleted="False" ShowGroupPanel="False" ShowAutoFilterRow="False" IsFindPanelVisible="False" FindPanelText="" VersionMark="3.4.1.12" />
+  <TABLESPACE_0000013b-0000-0000-0000-000000000000 RecentUsedFilterList="" VersionMark="3.4.1.12" />
+  <INSTRUCTION View="1" VersionMark="3.4.1.12" />
+  <BASEINSTRUCTIONCARD Left="52" Top="52" Height="629" Width="746" IsMaximized="False" QuickAccessToolBar_Position="Default" QuickAccessToolBar_Commands="" VersionMark="3.4.1.12">
+    <InstructionTabTree PreviewMode="2" HorizontalSplitterPos="438" VerticalSplitterPos="163" VersionMark="3.4.1.12" />
+    <InstructionTree TreeWidths="MailSubject=94;StartDate=112;ResultName=93;InstructionTypeName=88;Creator=75;Head=160;ReportCreatedDateTime=102;BaseDocumentNumber=118;ReportText=79;ReportERCName=115;MailCreatorName=89;HasNotes=53;Category=65;ExecAuditorName=128;RespReceiver=77;ReportCreatorName=118;OverTime=71;ExecutionEndDate=81;StateName=65;ReadDate=94;MailText=99;MailReceiverName=147;MailInitiatorName=89;CurEditorName=75;VersionCount=45;CreateDateTime=112;MailAuditorName=111;Priority=60;BaseAnnotation=177" TreeVisible="Head;StateName;Priority;CreateDateTime;StartDate;ExecutionEndDate" TreeSorting="" VersionMark="3.4.1.12" />
+  </BASEINSTRUCTIONCARD>
+  <newInstruction131 taskBoxlastValue="|" LdExecDatelastValue="|" LdStartDatelastValue="11.04.2017 10:01:46|Вт 11.04.2017 10:01" lblExecAuditorlastValue="|" lblReportReceiverlastValue="369482|Сотрудник001 (Подразделение-11, Пенза)" lblInitiatorlastValue="369482|Сотрудник001 (Подразделение-11, Пенза)" instrReceiversControllastValue="00059e0c-0000-0000-0000-000000000000|0000011;000596c5-0000-0000-0000-000000000000|00002-новый;0005b529-0000-0000-0000-000000000000|0001;00058281-0000-0000-0000-000000000000|0001444281054444411112;000596c2-0000-0000-0000-000000000000|0001-добавлен" VersionMark="3.4.1.12" />
+  <InstructionCardFields_InstructionTypeID_131_State_1 VisibileFieldList="PanelSubject;PanelTask;PanelComment;PanelController;PanelDurationAdjustment;PanelReceiverReport;PanelTaskIssued" CommentViewType="0" SplitInstructionDocInfoPosition="107" View="1" VersionMark="3.4.1.12" />
+  <DIALOGCHOICEOBJECTS Left="104" Top="104" Height="500" Width="700" IsMaximized="False" VersionMark="3.4.1.12">
+    <TOOLBARS VersionMark="3.4.1.12">
+      <XtraSerializer version="1.0" application="BarManager">
+        <property name="#LayoutVersion" />
+        <property name="Items" iskey="true" value="0" />
+        <property name="PopupMenuAlignment">Default</property>
+        <property name="CloseButtonAffectAllTabs">true</property>
+        <property name="RightToLeft">Default</property>
+        <property name="ItemLinkIdCollection" iskey="true" value="3">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Id">barButtonVocItemCreate</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Id">barButtonOpen</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Id">barButtonRefresh</property>
+          </property>
+        </property>
+        <property name="ShowFullMenus">true</property>
+        <property name="ShowFullMenusAfterDelay">true</property>
+        <property name="ShowShortcutInScreenTips">true</property>
+        <property name="ShowScreenTipsInToolbars">true</property>
+        <property name="LargeIcons">false</property>
+        <property name="MenuAnimationType">System</property>
+        <property name="Bars" iskey="true" value="1">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="OptionsBar" isnull="true" iskey="true">
+              <property name="MinHeight">0</property>
+              <property name="AutoPopupMode">Default</property>
+              <property name="DrawBorder">true</property>
+              <property name="AllowCollapse">false</property>
+              <property name="BarState">Expanded</property>
+              <property name="AllowDelete">false</property>
+              <property name="AllowRename">false</property>
+              <property name="AllowQuickCustomization">false</property>
+              <property name="DisableClose">true</property>
+              <property name="DisableCustomization">true</property>
+              <property name="DrawDragBorder">false</property>
+              <property name="DrawSizeGrip">false</property>
+              <property name="Hidden">false</property>
+              <property name="MultiLine">false</property>
+              <property name="RotateWhenVertical">true</property>
+              <property name="UseWholeRow">true</property>
+            </property>
+            <property name="FloatSize">@1,Width=0@1,Height=0</property>
+            <property name="FloatLocation">@1,X=0@1,Y=0</property>
+            <property name="BarName">barMenuMain</property>
+            <property name="Visible">true</property>
+            <property name="DockStyle">Top</property>
+            <property name="StandaloneBarDockControlName" />
+            <property name="DockRow">0</property>
+            <property name="DockCol">0</property>
+            <property name="Offset">0</property>
+            <property name="ItemLinks" iskey="true" value="3">
+              <property name="Item1" isnull="true" iskey="true">
+                <property name="ImageIndex">-1</property>
+                <property name="DropDownKeyTip" />
+                <property name="IsMerged">false</property>
+                <property name="IsPageGroupContentToolbarButtonLink">false</property>
+                <property name="GalleryLinkIndex">-1</property>
+                <property name="PageGroupName" />
+                <property name="IsGalleryToolbarItemLink">false</property>
+                <property name="GalleryBarItemName" />
+                <property name="ItemId">0</property>
+                <property name="ClickCount">0</property>
+                <property name="UserWidth">0</property>
+                <property name="UserEditWidth">0</property>
+                <property name="UserCaption" />
+                <property name="UserRibbonStyle">Default</property>
+                <property name="UserAlignment">Default</property>
+                <property name="UserPaintStyle">Standard</property>
+                <property name="Width">0</property>
+                <property name="RecentIndex">0</property>
+                <property name="Visible">true</property>
+                <property name="MostRecentlyUsed">true</property>
+                <property name="BeginGroup">false</property>
+                <property name="ActAsButtonGroup">false</property>
+                <property name="KeyTip" />
+                <property name="UserDefine">None</property>
+              </property>
+              <property name="Item2" isnull="true" iskey="true">
+                <property name="ImageIndex">-1</property>
+                <property name="DropDownKeyTip" />
+                <property name="IsMerged">false</property>
+                <property name="IsPageGroupContentToolbarButtonLink">false</property>
+                <property name="GalleryLinkIndex">-1</property>
+                <property name="PageGroupName" />
+                <property name="IsGalleryToolbarItemLink">false</property>
+                <property name="GalleryBarItemName" />
+                <property name="ItemId">1</property>
+                <property name="ClickCount">0</property>
+                <property name="UserWidth">0</property>
+                <property name="UserEditWidth">0</property>
+                <property name="UserCaption" />
+                <property name="UserRibbonStyle">Default</property>
+                <property name="UserAlignment">Default</property>
+                <property name="UserPaintStyle">Standard</property>
+                <property name="Width">0</property>
+                <property name="RecentIndex">1</property>
+                <property name="Visible">true</property>
+                <property name="MostRecentlyUsed">true</property>
+                <property name="BeginGroup">false</property>
+                <property name="ActAsButtonGroup">false</property>
+                <property name="KeyTip" />
+                <property name="UserDefine">None</property>
+              </property>
+              <property name="Item3" isnull="true" iskey="true">
+                <property name="ImageIndex">-1</property>
+                <property name="DropDownKeyTip" />
+                <property name="IsMerged">false</property>
+                <property name="IsPageGroupContentToolbarButtonLink">false</property>
+                <property name="GalleryLinkIndex">-1</property>
+                <property name="PageGroupName" />
+                <property name="IsGalleryToolbarItemLink">false</property>
+                <property name="GalleryBarItemName" />
+                <property name="ItemId">2</property>
+                <property name="ClickCount">0</property>
+                <property name="UserWidth">0</property>
+                <property name="UserEditWidth">0</property>
+                <property name="UserCaption" />
+                <property name="UserRibbonStyle">Default</property>
+                <property name="UserAlignment">Default</property>
+                <property name="UserPaintStyle">Standard</property>
+                <property name="Width">0</property>
+                <property name="RecentIndex">-1</property>
+                <property name="Visible">true</property>
+                <property name="MostRecentlyUsed">true</property>
+                <property name="BeginGroup">false</property>
+                <property name="ActAsButtonGroup">false</property>
+                <property name="KeyTip" />
+                <property name="UserDefine">None</property>
+              </property>
+            </property>
+          </property>
+        </property>
+      </XtraSerializer>
+    </TOOLBARS>
+  </DIALOGCHOICEOBJECTS>
+  <captionDialogChoice_GRIDVIEWNODENAME_USER Widths="DepartmentName=75;Name=75;PositionName=75;Login=75;CUREDITOR=24" Visible="CUREDITOR;Name=Сотрудник;DepartmentName=Подразделение;PositionName=Должность;Login=Имя пользователя" Sorting="Name=Ascending" Groping="" Locking="" AutoFilterRow="" TreeVisible="False" DetailVisible="False" GroupVisible="True" FindVisible="False" AutoFilterVisible="True" VersionMark="3.4.1.12" />
+  <EDSSignInfoForm />
+  <PROPERTIESWINDOW_INSTRUCTION Left="78" Top="78" Height="626" Width="502" IsMaximized="False" VersionMark="3.4.1.12" />
+  <CURRENTUSER_SENTITEMS_1 Widths="OverTime=80;StartDate=122;ReadDate=75;ReportText=6090;CreateDateTime=75;MailSubject=75;VersionCount=50;MailCreatorName=94;Priority=75;StateName=74;ReportCreatorName=75;BaseAnnotation=75;BaseDocumentNumber=351;ReportERCName=351;ResultName=75;MailInitiatorName=75;Category=75;ExecAuditorName=75;RespReceiver=75;HasNotes=75;MailText=10102;MailReceiverName=205;ExecutionEndDate=112;MailAuditorName=75;ReportCreatedDateTime=75;InstructionTypeName=97" Visible="StateName;OverTime;InstructionTypeName;MailCreatorName;MailReceiverName;MailText;StartDate;ExecutionEndDate;BaseDocumentNumber;ReportText;ReportERCName" Sorting="CreateDateTime=Descending" Groping="" Locking="" AutoFilterRow="" TreeNodeSortView="0" IsAppliedDateFilter="True" DatePeriod="3" StartDate="2017-01-12T00:00:00" EndDate="2017-04-11T00:00:00" DaysCount="0" IsAppliedReadFilter="False" AreReadItems="False" IsAppliedUserFilter="False" UserFilterID="0" UserFilterName="" IsUserFilterParametrized="False" UserFilterParameters="" IsFilterPanelCollapsed="False" ShowLogicalDeleted="False" ShowGroupPanel="False" ShowAutoFilterRow="False" IsFindPanelVisible="False" FindPanelText="" VersionMark="3.4.1.12" />
+  <TABLESPACE_0000007a-0000-0000-0000-000000000000 RecentUsedFilterList="" VersionMark="3.4.1.12" />
+  <InstructionCardFields_InstructionTypeID_131_State_2 VisibileFieldList="PanelSubject;PanelTask;PanelComment;PanelController;PanelDurationAdjustment;PanelReceiverReport;PanelTaskIssued" CommentViewType="0" SplitInstructionDocInfoPosition="140" View="1" VersionMark="3.4.1.12" />
+  <BASEREPORTCARD Left="52" Top="52" Height="629" Width="746" IsMaximized="False" QuickAccessToolBar_Position="Default" QuickAccessToolBar_Commands="" VersionMark="3.4.1.12">
+    <InstructionTabTree PreviewMode="2" HorizontalSplitterPos="439" VerticalSplitterPos="138" VersionMark="3.4.1.12" />
+    <InstructionTree />
+  </BASEREPORTCARD>
+  <newNotification132 />
+  <InstructionCardFields_InstructionTypeID_132_State_3 VisibileFieldList="PanelSubject;PanelComment" CommentViewType="0" SplitInstructionDocInfoPosition="112" View="1" VersionMark="3.4.1.12" />
+  <InstructionCardFields_InstructionTypeID_132_State_4 VisibileFieldList="PanelSubject;PanelComment" CommentViewType="0" SplitInstructionDocInfoPosition="112" VersionMark="3.4.1.12" />
+  <JOURNAL_DOCUMENTS_0005a54f000000000000000000000000 Widths="VersionCount=50;RegistrationDate=113;DeliveryType=75;LastEditDate=75;DocumentStateName=75;RegistrationNumber=75;Annotation=84;DocumentType=75;Composition=75;ContainerName=75;SheafCount=50;Name=75" Visible="RegistrationNumber;RegistrationDate;Annotation;VersionCount;SheafCount" Sorting="RegistrationNumber=Descending" Groping="" Locking="" AutoFilterRow="" IsAppliedDateFilter="True" DatePeriod="3" StartDate="2017-01-12T00:00:00" EndDate="2017-04-11T00:00:00" DaysCount="0" IsAppliedReadFilter="False" AreReadItems="False" IsAppliedUserFilter="False" UserFilterID="0" UserFilterName="" IsUserFilterParametrized="False" UserFilterParameters="" IsFilterPanelCollapsed="False" ShowLogicalDeleted="False" ShowGroupPanel="False" ShowAutoFilterRow="False" IsFindPanelVisible="False" FindPanelText="" VersionMark="3.4.1.12" />
+  <TABLESPACE_0000006c-0000-0000-0000-000000000000 RecentUsedFilterList="" VersionMark="3.4.1.12" />
+  <FilesTab />
+  <DocumentInstructionTab FullRedirectionTreeFilter="False" InstructionFilter="All" InstructionPreviewMode="0" InstructionPreviewSplitterPosition="200;200" ShowDeletedInstructions="False" VersionMark="3.4.1.12" />
+  <DOCUMENT_ />
+  <DOCUMENTCARD_REGISTEREDDOCUMENT_101 Left="130" Top="68" Height="700" Width="826" IsMaximized="False" QuickAccessToolBar_Position="Default" QuickAccessToolBar_Commands="" InstructionsViewType="Grid" VersionMark="3.4.1.12" />
+  <FILEGRIDDISPLAY View="1" VersionMark="3.4.1.12" />
+  <JOURNAL_DOCUMENTS_00053122000000000000000000000000 Widths="VersionCount=50;RegistrationDate=113;DeliveryType=75;LastEditDate=75;DocumentStateName=75;RegistrationNumber=199;Annotation=84;DocumentType=75;Composition=75;ContainerName=75;SheafCount=50;Name=75" Visible="RegistrationNumber;RegistrationDate;Annotation;VersionCount;SheafCount" Sorting="RegistrationDate=Descending" Groping="" Locking="" AutoFilterRow="" IsAppliedDateFilter="True" DatePeriod="3" StartDate="2017-01-17T00:00:00" EndDate="2017-04-16T00:00:00" DaysCount="0" IsAppliedReadFilter="False" AreReadItems="False" IsAppliedUserFilter="False" UserFilterID="0" UserFilterName="" IsUserFilterParametrized="False" UserFilterParameters="" IsFilterPanelCollapsed="False" ShowLogicalDeleted="False" ShowGroupPanel="False" ShowAutoFilterRow="False" IsFindPanelVisible="False" FindPanelText="" VersionMark="3.4.1.12" />
+  <DOCUMENTCARD_REGISTEREDDOCUMENT_103 Left="264" Top="24" Height="653" Width="958" IsMaximized="False" QuickAccessToolBar_Position="Default" QuickAccessToolBar_Commands="" InstructionsViewType="Grid" VersionMark="3.4.1.12" />
+  <FILEVERSIONSGRIDDISPLAY IsAppliedDateFilter="False" DatePeriod="0" StartDate="0001-01-01T00:00:00" EndDate="9999-12-31T23:59:59" DaysCount="0" IsAppliedReadFilter="False" AreReadItems="False" IsAppliedUserFilter="False" UserFilterID="0" UserFilterName="" IsUserFilterParametrized="False" UserFilterParameters="" IsFilterPanelCollapsed="False" ShowLogicalDeleted="False" ShowGroupPanel="False" ShowAutoFilterRow="False" IsFindPanelVisible="False" FindPanelText="" VersionMark="3.4.1.12" />
+  <MAINNWINDOW_PREVIEWER_DOCUMENT_DESCRIPTION />
+  <MAINNWINDOW_PREVIEWER_DOCUMENT_DOCUMENTPANEL_SPLITTER />
+  <MAINNWINDOW_PREVIEWER_DOCUMENT_TASKSPANEL_SPLITTER />
+  <MAINNWINDOW_PREVIEWER_DOCUMENT_INSTRUCTIONSPANEL_SPLITTER />
+  <MAINNWINDOW_PREVIEWER_DOCUMENT_DOCUMENTPANEL_DOCUMENTFILESPANEL_FILESGRID View="1" VersionMark="3.4.1.12" />
+</CONFIGURATION>
