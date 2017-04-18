@@ -26,10 +26,14 @@ namespace LanDocsUITest.LanDocs.Locators
             return new MainWindowDocs(MainMenuCreateBar());
         }
 
+        public MainTree MainTree()
+        {
+            return new MainTree(_mainWindow);
+        } 
+
 
         protected override Boolean IsPresent()
         {
-            
             _mainWindow.SearchProperties.Add(WinControl.PropertyNames.ControlName, "MainWindow");
             return _mainWindow.TryFind();           
        

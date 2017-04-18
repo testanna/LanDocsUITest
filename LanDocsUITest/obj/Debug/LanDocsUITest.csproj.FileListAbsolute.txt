@@ -15,3 +15,10 @@ C:\Users\User\Desktop\LanDocsUITest4\LanDocsUITest3\LanDocsUITest\LanDocsUITest\
 C:\Users\User\Desktop\LanDocsUITest4\LanDocsUITest3\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.pdb
 C:\Users\User\Desktop\LanDocsUITest4\LanDocsUITest3\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.TestData.resources
 C:\Users\User\Desktop\LanDocsUITest4\LanDocsUITest3\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.csproj.GenerateResource.Cache
+C:\AT\1\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.csprojResolveAssemblyReference.cache
+C:\AT\1\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.TestData.resources
+C:\AT\1\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.csproj.GenerateResource.Cache
+C:\AT\1\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.dll
+C:\AT\1\LanDocsUITest\LanDocsUITest\bin\Debug\LanDocsUITest.dll
+C:\AT\1\LanDocsUITest\LanDocsUITest\bin\Debug\LanDocsUITest.pdb
+C:\AT\1\LanDocsUITest\LanDocsUITest\obj\Debug\LanDocsUITest.pdb

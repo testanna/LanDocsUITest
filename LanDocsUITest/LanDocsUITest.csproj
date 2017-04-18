@@ -55,6 +55,8 @@
     <Compile Include="LanDocs\AutoTests\LoginTests.cs" />
     <Compile Include="LanDocs\Exceptions\ObjectNotFoundException.cs" />
     <Compile Include="LanDocs\Locators\CommonOptions.cs" />
+    <Compile Include="LanDocs\Locators\DocCardFilesMenu.cs" />
+    <Compile Include="LanDocs\Locators\DocCardFilesTab.cs" />
     <Compile Include="LanDocs\Locators\LanDocsApplication.cs" />
     <Compile Include="LanDocs\Locators\BaseWindow.cs" />
     <Compile Include="LanDocs\Locators\DocCardWindow.cs" />

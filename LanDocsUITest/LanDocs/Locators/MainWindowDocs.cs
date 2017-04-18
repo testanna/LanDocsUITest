@@ -36,7 +36,7 @@ namespace LanDocsUITest.LanDocs.Locators
 
         protected override Boolean IsPresent()
         {
-            _createDocButton.SearchProperties[WinButton.PropertyNames.Name] = "Создать документ";
+            _createDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Создать документ";
             return _createDocButton.TryFind();
         }
     }

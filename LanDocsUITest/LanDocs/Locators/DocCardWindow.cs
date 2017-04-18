@@ -10,18 +10,13 @@ using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
 namespace LanDocsUITest.LanDocs.Locators
 {
-    class DocCardWindow : BaseWindow
+    internal class DocCardWindow : BaseWindow
     {
         private readonly WinWindow _docCardWindow;
         private WinPane _docCardMenu;
-        private WinPane _docFilesMenu;
         private WinButton _saveDocButton;
-        private WinButton _addFilesButton;
-        private WinButton _addFileItem;
         private WinTabList _tabManager;
         private WinTabPage _tab;
-        private WinWindow _filesWindow;
-        private WinCell _file;
 
         public DocCardWindow() : base("Окно документа")
         {
@@ -39,51 +34,40 @@ namespace LanDocsUITest.LanDocs.Locators
             Mouse.Click(_saveDocButton);
         }
 
-
-        public void GoToTab(string tabName)
+        public DocCardFilesMenu GoToFIlesTab()
         {
-            FindTab(tabName);
+            FindTab("Файлы");
             Mouse.Click(_tab);
+            return new DocCardFilesMenu(_docCardWindow);
         }
 
-        public SelectFileWindow ClickAddFile()
+        public DocCardFilesMenu DocCardFilesMenu()
         {
-            FindAddFilesButton();
-            Mouse.Click(_addFilesButton);
-            FindAddFileItem();
-            Mouse.Click(_addFileItem);
-            return new SelectFileWindow();
+            return new DocCardFilesMenu(_docCardWindow);
         }
 
-        public bool IsFileAdded(string name)
+        public DocCardFilesTab DocCardFilesTab()
         {
-            FindFile(name);
-            Thread.Sleep(4000);
-            return _file.TryFind();
+            return new DocCardFilesTab(_docCardWindow);
         }
 
         protected override Boolean IsPresent()
         {
-            
             _docCardWindow.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name,
-                    "Документ LanDocs",
-                    PropertyExpressionOperator.Contains));
-            
+                "Документ LanDocs",
+                PropertyExpressionOperator.Contains));
+
             return _docCardWindow.TryFind();
         }
 
-
         private void FindDocCardMenu()
         {
-            
             if (_docCardMenu == null)
             {
                 _docCardMenu = new WinPane(_docCardWindow);
                 _docCardMenu.SearchProperties[UITestControl.PropertyNames.Name] = "Документ";
-
             }
         }
-
 
         private void FindDocSaveDocButton()
         {
@@ -92,47 +76,8 @@ namespace LanDocsUITest.LanDocs.Locators
             {
                 _saveDocButton = new WinButton(_docCardMenu);
                 _saveDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить";
-
-            }
-            
-        }
-
-        private void FindFilesCardMenu()
-        {
-
-            if (_docFilesMenu == null)
-            {
-                _docFilesMenu = new WinPane(_docCardWindow);
-                _docFilesMenu.SearchProperties[UITestControl.PropertyNames.Name] = "Файлы";
-
             }
         }
-
-        private void FindAddFilesButton()
-        {
-            FindFilesCardMenu();
-            if (_addFilesButton == null)
-            {
-                _addFilesButton = new WinButton(_docFilesMenu);
-                _addFilesButton.SearchProperties[UITestControl.PropertyNames.Name] = "Добавить";
-
-            }
-
-
-        }
-
-        private void FindAddFileItem()
-        {
-            if (_addFileItem == null)
-            {
-
-                _addFileItem = new WinButton(_addFilesButton);
-                _addFileItem.SearchProperties[UITestControl.PropertyNames.Name] = "Файл";
-
-            }
-        }
-
-
 
         private void FindTabManager()
         {
@@ -145,21 +90,7 @@ namespace LanDocsUITest.LanDocs.Locators
             FindTabManager();
             _tab = new WinTabPage(_tabManager);
             _tab.SearchProperties[UITestControl.PropertyNames.Name] = tabName;
-       
-        }
-
-        private void FindFile(string name)
-        {
-            if (_file == null)
-            {
-                _filesWindow = new WinWindow(_docCardWindow);
-                _filesWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "gcFiles";
-                _file = new WinCell(_filesWindow);
-                _file.SearchProperties[WinCell.PropertyNames.Value] = name;
-              
-            }
 
         }
-
     }
 }

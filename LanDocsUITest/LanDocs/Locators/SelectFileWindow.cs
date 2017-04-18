@@ -42,6 +42,7 @@ namespace LanDocsUITest.LanDocs.Locators
             Keyboard.SendKeys(name);
             FindOpenButton();
             Mouse.Click(_openButton);
+            
         }
 
 

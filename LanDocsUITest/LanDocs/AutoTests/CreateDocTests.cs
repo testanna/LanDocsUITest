@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UITest.Extension;
@@ -38,16 +39,17 @@ namespace LanDocsUITest.LanDocs.AutoTests
             loginWindow.EnterLogin(TestData.login);
             loginWindow.EnterPassword(TestData.password);
             MainWindow mainWindow = loginWindow.ClickEnterButton();
-            MainTree mainTree = new MainTree();
+            MainTree mainTree = mainWindow.MainTree();
             mainTree.GoToJournal(TestData.journalName);
             MainWindowDocs mainWindowDocs = mainWindow.Docs();
             DocCardWindow docCardWindow = mainWindowDocs.ClickCreateDocButton();
             docCardWindow.ClickSaveDocButton();
-            docCardWindow.GoToTab("Файлы");
-            SelectFileWindow selectFileWindow = docCardWindow.ClickAddFile();
+            DocCardFilesMenu docCardFilesMenu = docCardWindow.GoToFIlesTab();
+            SelectFileWindow selectFileWindow = docCardFilesMenu.ClickAddFile();
             selectFileWindow.SelectFile(TestData.fileName);
-            Assert.IsTrue(docCardWindow.IsFileAdded("TestDoc.docx"), "Файл не добавлен");
-
+            DocCardFilesTab docCardFilesTab = docCardWindow.DocCardFilesTab();
+            Assert.IsTrue(docCardFilesTab.IsFileAdded("TestDoc.docx"), "Файл не добавлен");
+            
         }
     }
 }

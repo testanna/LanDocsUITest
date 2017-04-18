@@ -79,7 +79,7 @@ namespace LanDocsUITest {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3.4.1.12.
+        ///   Looks up a localized string similar to 3.4.1.13.
         /// </summary>
         internal static string currentVersion {
             get {

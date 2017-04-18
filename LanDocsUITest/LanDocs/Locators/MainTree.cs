@@ -14,21 +14,12 @@ namespace LanDocsUITest.LanDocs.Locators
         private WinCell _docsCell;
         private WinCell _registrationJournalsCell;
         private WinCell _journalCell;
-        private WinWindow _mainWindow;
 
-        public MainTree() : base("Главное дерево")
+
+        public MainTree(WinWindow mainWindow) : base("Главное дерево")
         {
-
-
-            _mainTree = new WinWindow(MainWindow());
+            _mainTree = new WinWindow(mainWindow);
             Wait();
-        }
-
-        public WinWindow MainWindow()
-        {
-            _mainWindow = new WinWindow();
-            _mainWindow.SearchProperties.Add(WinControl.PropertyNames.ControlName, "MainWindow");
-            return _mainWindow;
         }
 
         public void GoToJournal(string journalName)
