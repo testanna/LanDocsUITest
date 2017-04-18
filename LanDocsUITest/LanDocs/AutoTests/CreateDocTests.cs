@@ -43,13 +43,38 @@ namespace LanDocsUITest.LanDocs.AutoTests
             mainTree.GoToJournal(TestData.journalName);
             MainWindowDocs mainWindowDocs = mainWindow.Docs();
             DocCardWindow docCardWindow = mainWindowDocs.ClickCreateDocButton();
+
+            string docDescription = docCardWindow.EnterDescription("краткое содержание");
             docCardWindow.ClickSaveDocButton();
+            string docRegDate = docCardWindow.GetRegDate();
+            string docRegNumber = docCardWindow.GetRegNumber();
             DocCardFilesMenu docCardFilesMenu = docCardWindow.GoToFIlesTab();
             SelectFileWindow selectFileWindow = docCardFilesMenu.ClickAddFile();
             selectFileWindow.SelectFile(TestData.fileName);
             DocCardFilesTab docCardFilesTab = docCardWindow.DocCardFilesTab();
+
             Assert.IsTrue(docCardFilesTab.IsFileAdded("TestDoc.docx"), "Файл не добавлен");
-            
+
+            docCardWindow.GoToDocumentTab();
+            docCardWindow.SaveAndCloseDocCardWindow();
+
+            MainGrid mainGrid = mainWindow.MainGrid();
+            string gridRegNumber = mainGrid.GetActiveCellValue("Рег. номер");
+            string gridRegDate = mainGrid.GetActiveCellValue("Дата регистрации");
+            string gridDescription = mainGrid.GetActiveCellValue("Содержание");
+            string gridFiles = mainGrid.GetActiveCellValue("Файлы");
+
+            Assert.AreEqual(docRegNumber, gridRegNumber, 
+                "Некорректное значение номера регистрации в списке документов");
+            Assert.AreEqual(docRegDate, gridRegDate, 
+                "Некорректное значение даты регистрации в списке документов");
+            Assert.AreEqual(docDescription, gridDescription,
+                "Некорректное значение краткого содержания в списке документов");
+            Assert.AreEqual("1", gridFiles,
+                "Некорректное значение файлов в списке документов");
+
+
+  
         }
     }
 }

@@ -35,14 +35,10 @@ namespace LanDocsUITest.LanDocs.Locators
 
         public void SelectFile(string name)
         {
-            const string lang = "00000419";
-            int ret = LoadKeyboardLayout(lang, 1);
-            PostMessage(GetForegroundWindow(), 0x50, 1, ret);
             FindFileName();
-            Keyboard.SendKeys(name);
+            CommonOptions.SendKeysEng(name);
             FindOpenButton();
-            Mouse.Click(_openButton);
-            
+            Mouse.Click(_openButton);       
         }
 
 

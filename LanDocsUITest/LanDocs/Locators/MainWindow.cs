@@ -29,6 +29,11 @@ namespace LanDocsUITest.LanDocs.Locators
         public MainTree MainTree()
         {
             return new MainTree(_mainWindow);
+        }
+
+        public MainGrid MainGrid()
+        {
+            return new MainGrid(_mainWindow);
         } 
 
 

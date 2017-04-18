@@ -25,7 +25,7 @@ namespace LanDocsUITest.LanDocs.Locators
         {
             
             FindFile(name);
-            Thread.Sleep(4000);
+            _file.WaitForControlExist(10000);
             return _file.TryFind();
         }
 
