@@ -51,20 +51,21 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LanDocs\AutoTests\CreateDocTests.cs" />
-    <Compile Include="LanDocs\AutoTests\LoginTests.cs" />
-    <Compile Include="LanDocs\Exceptions\ObjectNotFoundException.cs" />
-    <Compile Include="LanDocs\Locators\CommonOptions.cs" />
-    <Compile Include="LanDocs\Locators\DocCardFilesMenu.cs" />
-    <Compile Include="LanDocs\Locators\DocCardFilesTab.cs" />
-    <Compile Include="LanDocs\Locators\LanDocsApplication.cs" />
-    <Compile Include="LanDocs\Locators\BaseWindow.cs" />
-    <Compile Include="LanDocs\Locators\DocCardWindow.cs" />
-    <Compile Include="LanDocs\Locators\LoginWindow.cs" />
-    <Compile Include="LanDocs\Locators\MainTree.cs" />
-    <Compile Include="LanDocs\Locators\MainWindow.cs" />
-    <Compile Include="LanDocs\Locators\MainWindowDocs.cs" />
-    <Compile Include="LanDocs\Locators\SelectFileWindow.cs" />
+    <Compile Include="LanDocs3Client\AutoTests\CreateDocTests.cs" />
+    <Compile Include="LanDocs3Client\AutoTests\LoginTests.cs" />
+    <Compile Include="LanDocs3Client\Exceptions\ObjectNotFoundException.cs" />
+    <Compile Include="LanDocs3Client\Locators\CommonOptions.cs" />
+    <Compile Include="LanDocs3Client\Locators\DocCardFilesMenu.cs" />
+    <Compile Include="LanDocs3Client\Locators\DocCardFilesTab.cs" />
+    <Compile Include="LanDocs3Client\Locators\LanDocsApplication.cs" />
+    <Compile Include="LanDocs3Client\Locators\BaseControl.cs" />
+    <Compile Include="LanDocs3Client\Locators\DocCardWindow.cs" />
+    <Compile Include="LanDocs3Client\Locators\LoginWindow.cs" />
+    <Compile Include="LanDocs3Client\Locators\MainGrid.cs" />
+    <Compile Include="LanDocs3Client\Locators\MainTree.cs" />
+    <Compile Include="LanDocs3Client\Locators\MainWindow.cs" />
+    <Compile Include="LanDocs3Client\Locators\MainWindowDocs.cs" />
+    <Compile Include="LanDocs3Client\Locators\SelectFileWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestData.Designer.cs">
       <AutoGen>True</AutoGen>

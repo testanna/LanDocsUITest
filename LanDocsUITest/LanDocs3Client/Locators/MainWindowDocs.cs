@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-
-
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    class MainWindowDocs : BaseWindow
+    /// <summary>
+    /// Класс для работы с главным окном в разделе Документы.
+    /// </summary>
+    class MainWindowDocs : BaseControl
     {
         private readonly WinToolBar _mainDocsCreateBar;
         private readonly WinButton _createDocButton;
 
+        /// <summary>
+        /// Главное окно документов.
+        /// </summary>
         public MainWindowDocs(WinToolBar mainDocsMenu)
             : base("Главное окно документов")
         {
@@ -26,13 +24,17 @@ namespace LanDocsUITest.LanDocs.Locators
         }
 
         /// <summary>
-        /// TODO Summary description 
+        /// Кликает по кнопке Создать документ.
         /// </summary>
+        /// <returns>
+        /// Возвращает окно создания документа.
+        /// </returns>
         public DocCardWindow ClickCreateDocButton()
         {
             Mouse.Click(_createDocButton);
             return new DocCardWindow();
         }
+
 
         protected override Boolean IsPresent()
         {

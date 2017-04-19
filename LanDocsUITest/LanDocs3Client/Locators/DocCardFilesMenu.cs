@@ -1,27 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    class DocCardFilesMenu : BaseWindow
+    /// <summary>
+    /// Класс содержит методы и объекты для работы с лентой меню окна документа на закладке Файлы.
+    /// </summary>
+    class DocCardFilesMenu : BaseControl
     {
         private readonly WinPane _docFilesMenu;
         private WinButton _addFilesButton;
         private WinButton _addFileItem;
 
-        public DocCardFilesMenu(WinWindow docCardWindow) : base("Лента меню Файлы на закладке Файлы")
+        /// <summary>
+        /// Лента меню окна документа на закладке Файлы.
+        /// </summary>
+        public DocCardFilesMenu(WinWindow docCardWindow) : 
+            base("Лента меню Файлы на закладке Файлы")
         {
             _docFilesMenu = new WinPane(docCardWindow);
             Wait();
         }
 
+        /// <summary>
+        /// Выполняет действие Добавить - Файл из ленты меню на закладке Файлы.
+        /// </summary>
+        /// <returns>
+        /// Объект SelectFileWindow - стандартное окно выбора файлов.
+        /// </returns>
         public SelectFileWindow ClickAddFile()
         {
             FindAddFilesButton();
@@ -51,10 +58,8 @@ namespace LanDocsUITest.LanDocs.Locators
         {
             if (_addFileItem == null)
             {
-
                 _addFileItem = new WinButton(_addFilesButton);
                 _addFileItem.SearchProperties[UITestControl.PropertyNames.Name] = "Файл";
-
             }
         }
 

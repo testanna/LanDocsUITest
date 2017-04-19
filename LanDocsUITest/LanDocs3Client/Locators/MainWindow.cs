@@ -1,36 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    class MainWindow : BaseWindow
+    /// <summary>
+    /// Класс для работы с главным окном.
+    /// </summary>
+    class MainWindow : BaseControl
     {
         private readonly WinWindow _mainWindow;
 
+        /// <summary>
+        /// Главное окно системы.
+        /// </summary>
         public MainWindow() : base("Главное окно")
         {
             _mainWindow = new WinWindow();
             Wait();
         }
 
+        /// <summary>
+        /// Главное окно - Документы.
+        /// </summary>
         public MainWindowDocs Docs()
         {
             return new MainWindowDocs(MainMenuCreateBar());
         }
 
+        /// <summary>
+        /// Главное окно - Главное дерево.
+        /// </summary>
         public MainTree MainTree()
         {
             return new MainTree(_mainWindow);
         }
 
+        /// <summary>
+        /// Главное окно - список объектов.
+        /// </summary>
         public MainGrid MainGrid()
         {
             return new MainGrid(_mainWindow);
@@ -43,6 +51,7 @@ namespace LanDocsUITest.LanDocs.Locators
             return _mainWindow.TryFind();           
        
         }
+
 
         private WinToolBar MainMenuCreateBar()
         {

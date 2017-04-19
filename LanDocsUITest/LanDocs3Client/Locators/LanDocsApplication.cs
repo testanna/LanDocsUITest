@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
     /// <summary>
-    /// TODO Summary description 
+    /// Класс для работы с приложением.
     /// </summary>
     class LanDocsApplication
     {
-
         /// <summary>
-        /// TODO Summary description 
+        /// Запускает клиент LD3.
         /// </summary>
+        /// <returns>
+        /// Возвращает окно входа в систему.
+        /// </returns>
         public static LoginWindow Start()
         {
             ApplicationUnderTest.Launch(@"C:\Program Files (x86)\LanDocs\Client3\LanDocs3.exe");

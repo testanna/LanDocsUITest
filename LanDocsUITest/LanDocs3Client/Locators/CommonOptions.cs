@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Threading;
-using System.Windows.Forms;
 using Microsoft.VisualStudio.TestTools.UITesting;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    class CommonOptions
-        
+    /// <summary>
+    /// Класс содержит общие методы.
+    /// </summary>
+    class CommonOptions     
     {
+        /// <summary>
+        /// Метод заменяет конфигурационный файл клиента LanDocs3.exe.config.
+        /// В LanDocs3.exe.config должен быть прописан СП и значение SecurytyEnabled = "False".
+        /// </summary>
         public void SetConfigurationFile()
         {
             File.Delete(TestData.configurationFilePath+TestData.configurationFileName);
@@ -21,6 +21,11 @@ namespace LanDocsUITest.LanDocs.Locators
             
         }
 
+        /// <summary>
+        /// Метод заменяет файлы пользовательских настроек на необходимые для тестирования.
+        /// В настройках прописывается имя пользователя, все узлы главного дерева свернуты, 
+        /// вид отображения файлов - таблица, в журнале установлена сортировка по дате регистрации по убыванию.
+        /// </summary>
         public void SetSettings()
         {
             string currenUser = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
@@ -44,12 +49,21 @@ namespace LanDocsUITest.LanDocs.Locators
         [DllImport("user32.dll")]
         static extern int LoadKeyboardLayout(string pwszKLID, uint flags);
 
-        public static void SendKeysEng(string text)
+        /// <summary>
+        /// Метод вводит текст латинницей в поле.
+        /// </summary>
+        /// <param name="control">
+        /// Поле для ввода текста.
+        /// </param>
+        /// <param name="text">
+        /// Текст для ввода в поле.
+        /// </param>
+        public static void SendKeysEng(UITestControl control, string text)
         {
             const string lang = "00000419";
             int ret = LoadKeyboardLayout(lang, 1);
             PostMessage(GetForegroundWindow(), 0x50, 1, ret);
-            Keyboard.SendKeys(text);
+            Keyboard.SendKeys(control, text);
         }
 
     }

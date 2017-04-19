@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-using System.Windows;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    internal class DocCardWindow : BaseWindow
+    /// <summary>
+    /// Класс содержит методы и объекты для работы с окном документа на закладке Документ.
+    /// </summary>
+    class DocCardWindow : BaseControl
     {
         private readonly WinWindow _docCardWindow;
         private WinPane _docCardMenu;
@@ -26,12 +22,24 @@ namespace LanDocsUITest.LanDocs.Locators
         private WinWindow _docDescriptionWindow;
         private WinWindow _regDateWindow;
 
+        /// <summary>
+        /// Окно документа.
+        /// </summary>
         public DocCardWindow() : base("Окно документа")
         {
             _docCardWindow = new WinWindow();
             Wait();
         }
 
+        /// <summary>
+        /// Вводит значение в поле Дата регистрации.
+        /// </summary>
+        /// <param name="regDate">
+        /// Значение даты регистрации.
+        /// </param>
+        /// <returns>
+        /// Возвращает введенное значение.
+        /// </returns>
         public string EnterRegDate(string regDate)
         {
             FindRegDate();
@@ -39,6 +47,15 @@ namespace LanDocsUITest.LanDocs.Locators
             return regDate;
         }
 
+        /// <summary>
+        /// Вводит значение в поле Рег. номер.
+        /// </summary>
+        /// <param name="regNumber">
+        /// Значение регистрационного номера.
+        /// </param>
+        /// <returns>
+        /// Возвращает введенное значение.
+        /// </returns>
         public string EnterRegNumber(string regNumber)
         {
             FindRegNumber();
@@ -46,6 +63,15 @@ namespace LanDocsUITest.LanDocs.Locators
             return regNumber;
         }
 
+        /// <summary>
+        /// Вводит значение в поле Краткое содержание.
+        /// </summary>
+        /// <param name="description">
+        /// Значение для поля краткого содержания.
+        /// </param>
+        /// <returns>
+        /// Возвращает введенное значение.
+        /// </returns>
         public string EnterDescription(string description)
         {
             FindDescription();
@@ -53,33 +79,49 @@ namespace LanDocsUITest.LanDocs.Locators
             return description;
         }
 
+        /// <summary>
+        /// Получает значение Name поля Дата регистрации.
+        /// </summary>
+        /// <returns>
+        /// Возвращает значение в поле Дата регистрации.
+        /// </returns>
         public string GetRegDate()
         {
             FindRegDate();
             return _regDate.GetProperty("Name").ToString();
         }
 
+        /// <summary>
+        /// Получает значение Text поля Регистрационный номер.
+        /// </summary>
+        /// <returns>
+        /// Возвращает значение в поле Регистрационный номер.
+        /// </returns>
         public string GetRegNumber()
         {
             FindRegNumber();
             return _regNumber.GetProperty("Text").ToString();
         }
 
+        /// <summary>
+        /// Получает значение Text поля Краткое содержание.
+        /// </summary>
+        /// <returns>
+        /// Возвращает значение в поле Краткое содержание.
+        /// </returns>
         public string GetDescription()
         {
             FindDescription();
             return _docDescription.GetProperty("Text").ToString();
         }
 
-        /// <summary>
-        /// TODO Summary description 
-        /// </summary>
-        public void ClickSaveDocButton()
-        {
-            FindDocSaveDocButton();
-            Mouse.Click(_saveDocButton);
-        }
 
+        /// <summary>
+        /// Переходит на закладку Файлы.
+        /// </summary>
+        /// <returns>
+        /// Возвращает ленту меню закладки Файлы.
+        /// </returns>
         public DocCardFilesMenu GoToFIlesTab()
         {
             FindTab("Файлы");
@@ -87,6 +129,12 @@ namespace LanDocsUITest.LanDocs.Locators
             return new DocCardFilesMenu(_docCardWindow);
         }
 
+        /// <summary>
+        /// Переходит на закладку Документ.
+        /// </summary>
+        /// <returns>
+        /// Возвращает ленту меню закладки Документ.
+        /// </returns>
         public WinPane GoToDocumentTab()
         {
             FindTab("Документ");
@@ -95,6 +143,19 @@ namespace LanDocsUITest.LanDocs.Locators
         }
 
 
+
+        /// <summary>
+        /// Кликает на кнопку Сохранить в окне документа.
+        /// </summary>
+        public void ClickSaveDocButton()
+        {
+            FindDocSaveDocButton();
+            Mouse.Click(_saveDocButton);
+        }
+
+        /// <summary>
+        /// Кликает на кнопку Сохранить и закрыть в окне документа.
+        /// </summary>
         public void SaveAndCloseDocCardWindow()
         {
            FindDocSaveAndCloseDocButton();
@@ -102,11 +163,17 @@ namespace LanDocsUITest.LanDocs.Locators
         }
 
 
+        /// <summary>
+        /// Лента меню закладки Файлы окна документа.
+        /// </summary>
         public DocCardFilesMenu DocCardFilesMenu()
         {
             return new DocCardFilesMenu(_docCardWindow);
         }
 
+        /// <summary>
+        /// Закладка Файлы окна документа.
+        /// </summary>
         public DocCardFilesTab DocCardFilesTab()
         {
             return new DocCardFilesTab(_docCardWindow);
@@ -120,6 +187,7 @@ namespace LanDocsUITest.LanDocs.Locators
 
             return _docCardWindow.TryFind();
         }
+
 
         private void FindDocCardMenu()
         {
@@ -149,6 +217,7 @@ namespace LanDocsUITest.LanDocs.Locators
                 _saveAndCloseDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить и закрыть";
             }
         }
+
 
         private void FindRegDate()
         {
@@ -181,10 +250,14 @@ namespace LanDocsUITest.LanDocs.Locators
             }
         }
 
+
         private void FindTabManager()
         {
-            _tabManager = new WinTabList(_docCardWindow);
-            _tabManager.SearchProperties[WinControl.PropertyNames.ControlName] = "tabManager";
+            if (_tabManager == null)
+            {
+                _tabManager = new WinTabList(_docCardWindow);
+                _tabManager.SearchProperties[WinControl.PropertyNames.ControlName] = "tabManager";
+            }
         }
 
         private void FindTab(string tabName)

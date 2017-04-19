@@ -1,42 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
-    class SelectFileWindow : BaseWindow
+    /// <summary>
+    /// Класс для работы с окном выбора файлов.
+    /// </summary>
+    class SelectFileWindow : BaseControl
     {
         private readonly WinWindow _selectFileWindow;
         private WinEdit _fileName;
         private WinButton _openButton;
 
-        [DllImport("user32.dll")]
-        public static extern IntPtr GetForegroundWindow();
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern bool PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
-        [DllImport("user32.dll")]
-        static extern int LoadKeyboardLayout(string pwszKLID, uint flags);
-
+        /// <summary>
+        /// Окно выбора файлов.
+        /// </summary>
         public SelectFileWindow() : base("Окно выбора файла")
         {
             _selectFileWindow = new WinWindow();
             Wait();
         }
 
+        /// <summary>
+        /// Выбирает файл и нажимает кнопку Открыть.
+        /// </summary>
+        /// <param name="name">
+        /// Имя файла.
+        /// </param>
         public void SelectFile(string name)
         {
-            FindFileName();
-            CommonOptions.SendKeysEng(name);
+            CommonOptions.SendKeysEng(FindFileName(), name);
             FindOpenButton();
             Mouse.Click(_openButton);       
         }
@@ -44,13 +38,12 @@ namespace LanDocsUITest.LanDocs.Locators
 
         protected override Boolean IsPresent()
         {
-
             _selectFileWindow.SearchProperties.Add(UITestControl.PropertyNames.Name, "Открытие");
             return _selectFileWindow.TryFind();
-
         }
 
-        private void FindFileName()
+
+        private WinEdit FindFileName()
         {
             if (_fileName == null)
             {
@@ -58,19 +51,17 @@ namespace LanDocsUITest.LanDocs.Locators
                 _fileName.SearchProperties[UITestControl.PropertyNames.Name] = "Имя файла:";
 
             }
+            return _fileName;
         }
 
-                private void FindOpenButton()
+        private void FindOpenButton()
         {
             if (_openButton == null)
             {
-                _openButton = new WinButton(_selectFileWindow);
+               _openButton = new WinButton(_selectFileWindow);
                _openButton.SearchProperties[UITestControl.PropertyNames.Name] = "Открыть";
-
             }
         }
-        
-
 
     }
 }

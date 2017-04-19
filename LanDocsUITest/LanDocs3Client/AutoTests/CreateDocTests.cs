@@ -1,25 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Globalization;
+using LanDocsUITest.LanDocs3Client.Locators;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
-using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
-
-using LanDocsUITest.LanDocs.Locators;
 
 
-namespace LanDocsUITest.LanDocs.AutoTests
+namespace LanDocsUITest.LanDocs3Client.AutoTests
 {
     /// <summary>
-    /// TODO Summary description for CodedUITest1
+    /// Тесты на создание документа.
     /// </summary>
     [CodedUITest]
     public class CreateDocTests
@@ -44,7 +33,7 @@ namespace LanDocsUITest.LanDocs.AutoTests
             MainWindowDocs mainWindowDocs = mainWindow.Docs();
             DocCardWindow docCardWindow = mainWindowDocs.ClickCreateDocButton();
 
-            string docDescription = docCardWindow.EnterDescription("краткое содержание");
+            string docDescription = docCardWindow.EnterDescription("краткое содержание" + DateTime.Now.ToString(CultureInfo.InvariantCulture));
             docCardWindow.ClickSaveDocButton();
             string docRegDate = docCardWindow.GetRegDate();
             string docRegNumber = docCardWindow.GetRegNumber();
@@ -53,16 +42,16 @@ namespace LanDocsUITest.LanDocs.AutoTests
             selectFileWindow.SelectFile(TestData.fileName);
             DocCardFilesTab docCardFilesTab = docCardWindow.DocCardFilesTab();
 
-            Assert.IsTrue(docCardFilesTab.IsFileAdded("TestDoc.docx"), "Файл не добавлен");
+            Assert.IsTrue(docCardFilesTab.IsFileAdded(TestData.fileName), "Файл не добавлен");
 
             docCardWindow.GoToDocumentTab();
             docCardWindow.SaveAndCloseDocCardWindow();
 
             MainGrid mainGrid = mainWindow.MainGrid();
-            string gridRegNumber = mainGrid.GetActiveCellValue("Рег. номер");
-            string gridRegDate = mainGrid.GetActiveCellValue("Дата регистрации");
-            string gridDescription = mainGrid.GetActiveCellValue("Содержание");
-            string gridFiles = mainGrid.GetActiveCellValue("Файлы");
+            string gridRegNumber = mainGrid.GetFirstCellValue("Рег. номер");
+            string gridRegDate = mainGrid.GetFirstCellValue("Дата регистрации");
+            string gridDescription = mainGrid.GetFirstCellValue("Содержание");
+            string gridFiles = mainGrid.GetFirstCellValue("Файлы");
 
             Assert.AreEqual(docRegNumber, gridRegNumber, 
                 "Некорректное значение номера регистрации в списке документов");

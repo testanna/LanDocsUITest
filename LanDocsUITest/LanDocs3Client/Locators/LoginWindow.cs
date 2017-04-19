@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
-namespace LanDocsUITest.LanDocs.Locators
+namespace LanDocsUITest.LanDocs3Client.Locators
 {
     /// <summary>
-    /// TODO Summary description 
+    /// Класс для работы с окном входа в систему.
     /// </summary>
-    class LoginWindow : BaseWindow
+    class LoginWindow : BaseControl
     {
 
         readonly WinWindow _loginWindow;
@@ -22,6 +16,9 @@ namespace LanDocsUITest.LanDocs.Locators
 
         private WinButton _enterButton;
 
+        /// <summary>
+        /// Окно входа в систему.
+        /// </summary>
         public LoginWindow() : base("Окно логина")
         {
             _loginWindow = new WinWindow();
@@ -29,16 +26,22 @@ namespace LanDocsUITest.LanDocs.Locators
         }
 
         /// <summary>
-        /// TODO Summary description 
+        /// Вводит значение в поле Логин. 
         /// </summary>
+        /// <param name="login">
+        /// Значение логина для ввода.
+        /// </param>
         public void EnterLogin(String login)
         {
             Keyboard.SendKeys(_loginEdit, login);
         }
 
         /// <summary>
-        /// TODO Summary description 
+        /// Вводит значение в поле Пароль.
         /// </summary>
+        /// <param name="password">
+        /// Значение пароля для ввода.
+        /// </param>
         public void EnterPassword(String password)
         {
             FindPasswordEdit();
@@ -47,8 +50,11 @@ namespace LanDocsUITest.LanDocs.Locators
         }
 
         /// <summary>
-        /// TODO Summary description 
+        /// Кликает по кнопке Вход в окне входа.
         /// </summary>
+        /// <returns>
+        /// Возвращает главное окно системы.
+        /// </returns>
         public MainWindow ClickEnterButton()
         {
             FindEnterButton();
@@ -65,6 +71,7 @@ namespace LanDocsUITest.LanDocs.Locators
             ClickEnterButton();
         }
 
+
         protected override Boolean IsPresent()
         {
             if (_loginEdit == null)
@@ -76,22 +83,25 @@ namespace LanDocsUITest.LanDocs.Locators
             return _loginEdit.TryFind();
         }
 
+
         private void FindPasswordEdit()
         {
-            if (_passwordEdit != null) return;
-
-            WinWindow passwordWindow = new WinWindow();
-            passwordWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditPassword";
-            _passwordEdit = new WinEdit(passwordWindow);
+            if (_passwordEdit == null)
+            {
+                WinWindow passwordWindow = new WinWindow();
+                passwordWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditPassword";
+                _passwordEdit = new WinEdit(passwordWindow);
+            }
         }
 
         private void FindEnterButton()
         {
-            if (_enterButton != null) return;
-
-            WinWindow enterWindow = new WinWindow();
-            enterWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "btnGo";
-            _enterButton = new WinButton(enterWindow);
+            if (_enterButton == null)
+            {
+                WinWindow enterWindow = new WinWindow();
+                enterWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "btnGo";
+                _enterButton = new WinButton(enterWindow);
+            }
         }
 
 
