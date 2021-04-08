@@ -30,7 +30,7 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         /// </param>
         public void SelectFile(string name)
         {
-            CommonOptions.SendKeysEng(FindFileName(), name);
+            Keyboard.SendKeys(FindFileName(), name);
             FindOpenButton();
             Mouse.Click(_openButton);       
         }

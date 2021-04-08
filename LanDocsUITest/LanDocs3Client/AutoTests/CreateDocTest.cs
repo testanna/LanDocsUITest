@@ -16,9 +16,8 @@ namespace LanDocsUITest.LanDocs3Client.AutoTests
         [TestInitialize]
         public void Initialize()
         {
-            CommonOptions commonOptions = new CommonOptions();
-            commonOptions.SetConfigurationFile();
-            commonOptions.SetSettings();
+            LocalFile.SetConfigurationFile();
+            LocalFile.SetSettings();
         }
 
         [TestMethod]
