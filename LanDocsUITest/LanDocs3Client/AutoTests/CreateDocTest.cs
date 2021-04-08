@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using LanDocsUITest.LanDocs3Client.Locators;
+using LanDocsUITest.LanDocs3Client.Pages;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
