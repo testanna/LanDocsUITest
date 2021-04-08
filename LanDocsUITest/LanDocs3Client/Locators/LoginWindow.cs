@@ -64,11 +64,11 @@ namespace LanDocsUITest.LanDocs3Client.Locators
             return new MainWindow();
         }
 
-        public void Autorization(string login, string password)
+        public MainWindow Autorization(string login, string password)
         {
             EnterLogin(login);
             EnterPassword(password);
-            ClickEnterButton();
+            return ClickEnterButton();
         }
 
 

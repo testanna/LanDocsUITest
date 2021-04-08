@@ -23,22 +23,25 @@ namespace LanDocsUITest.LanDocs3Client.AutoTests
         [TestMethod]
         public void SuccessCreateDocWithFile()
         {
-            LoginWindow loginWindow = LanDocsApplication.Start();
-            loginWindow.EnterLogin(TestData.login);
-            loginWindow.EnterPassword(TestData.password);
-            MainWindow mainWindow = loginWindow.ClickEnterButton();
-            MainTree mainTree = mainWindow.MainTree();
-            mainTree.GoToJournal(TestData.journalName);
-            MainWindowDocs mainWindowDocs = mainWindow.Docs();
-            DocCardWindow docCardWindow = mainWindowDocs.ClickCreateDocButton();
+            MainWindow mainWindow = LanDocsApplication.Start()
+                .Autorization(TestData.login, TestData.password);
 
-            string docDescription = docCardWindow.EnterDescription("краткое содержание" + DateTime.Now.ToString(CultureInfo.InvariantCulture));
+            mainWindow.MainTree()
+                .GoToJournal(TestData.journalName);
+            DocCardWindow docCardWindow = mainWindow.Docs()
+                .ClickCreateDocButton();
+
+            string docDescription = docCardWindow
+                .EnterDescription("краткое содержание" 
+                + DateTime.Now.ToString(CultureInfo.InvariantCulture));
             docCardWindow.ClickSaveDocButton();
+
             string docRegDate = docCardWindow.GetRegDate();
             string docRegNumber = docCardWindow.GetRegNumber();
-            DocCardFilesMenu docCardFilesMenu = docCardWindow.GoToFIlesTab();
-            SelectFileWindow selectFileWindow = docCardFilesMenu.ClickAddFile();
-            selectFileWindow.SelectFile(TestData.fileName);
+
+            docCardWindow.GoToFIlesTab()
+                .ClickAddFile()
+                .SelectFile(TestData.fileName);
             DocCardFilesTab docCardFilesTab = docCardWindow.DocCardFilesTab();
 
             Assert.IsTrue(docCardFilesTab.IsFileAdded(TestData.fileName), "Файл не добавлен");
@@ -59,10 +62,7 @@ namespace LanDocsUITest.LanDocs3Client.AutoTests
             Assert.AreEqual(docDescription, gridDescription,
                 "Некорректное значение краткого содержания в списке документов");
             Assert.AreEqual("1", gridFiles,
-                "Некорректное значение файлов в списке документов");
-
-
-  
+                "Некорректное значение файлов в списке документов"); 
         }
     }
 }

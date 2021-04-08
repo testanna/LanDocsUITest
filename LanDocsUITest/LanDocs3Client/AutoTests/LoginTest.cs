@@ -18,8 +18,6 @@ namespace LanDocsUITest.LanDocs3Client.AutoTests
             loginWindow.EnterLogin(TestData.login);
             loginWindow.EnterPassword(TestData.password);
             MainWindow mainWindow = loginWindow.ClickEnterButton();
-
-
         }
     }
 }
