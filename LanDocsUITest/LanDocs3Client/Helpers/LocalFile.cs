@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace LanDocsUITest.LanDocs3Client.Locators
+namespace LanDocsUITest.LanDocs3Client.Helpers
 {
     /// <summary>
     /// Класс содержит общие методы работы с файлами на локальном диске.
