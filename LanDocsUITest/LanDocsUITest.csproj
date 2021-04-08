@@ -51,8 +51,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LanDocs3Client\AutoTests\CreateDocTests.cs" />
-    <Compile Include="LanDocs3Client\AutoTests\LoginTests.cs" />
+    <Compile Include="LanDocs3Client\AutoTests\CreateDocTest.cs" />
+    <Compile Include="LanDocs3Client\AutoTests\LoginTest.cs" />
     <Compile Include="LanDocs3Client\Exceptions\ObjectNotFoundException.cs" />
     <Compile Include="LanDocs3Client\Locators\CommonOptions.cs" />
     <Compile Include="LanDocs3Client\Locators\DocCardFilesMenu.cs" />
