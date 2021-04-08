@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
@@ -142,8 +141,6 @@ namespace LanDocsUITest.LanDocs3Client.Locators
             return _docCardMenu;
         }
 
-
-
         /// <summary>
         /// Кликает на кнопку Сохранить в окне документа.
         /// </summary>
@@ -158,10 +155,9 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         /// </summary>
         public void SaveAndCloseDocCardWindow()
         {
-           FindDocSaveAndCloseDocButton();
-           Mouse.Click(_saveAndCloseDocButton);
+            FindDocSaveAndCloseDocButton();
+            Mouse.Click(_saveAndCloseDocButton);
         }
-
 
         /// <summary>
         /// Лента меню закладки Файлы окна документа.
@@ -179,7 +175,7 @@ namespace LanDocsUITest.LanDocs3Client.Locators
             return new DocCardFilesTab(_docCardWindow);
         }
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
             _docCardWindow.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name,
                 "Документ LanDocs",
@@ -191,73 +187,52 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindDocCardMenu()
         {
-            if (_docCardMenu == null)
-            {
-                _docCardMenu = new WinPane(_docCardWindow);
-                _docCardMenu.SearchProperties[UITestControl.PropertyNames.Name] = "Документ";
-            }
+            _docCardMenu = new WinPane(_docCardWindow);
+            _docCardMenu.SearchProperties[UITestControl.PropertyNames.Name] = "Документ";
         }
 
         private void FindDocSaveDocButton()
         {
             FindDocCardMenu();
-            if (_saveDocButton == null)
-            {
-                _saveDocButton = new WinButton(_docCardMenu);
-                _saveDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить";
-            }
+            _saveDocButton = new WinButton(_docCardMenu);
+            _saveDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить";
         }
 
         private void FindDocSaveAndCloseDocButton()
         {
             FindDocCardMenu();
-            if (_saveAndCloseDocButton == null)
-            {
-                _saveAndCloseDocButton = new WinButton(_docCardMenu);
-                _saveAndCloseDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить и закрыть";
-            }
+            _saveAndCloseDocButton = new WinButton(_docCardMenu);
+            _saveAndCloseDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Сохранить и закрыть";
         }
 
 
         private void FindRegDate()
         {
-            if (_regDate == null)
-            {
-                _regDateWindow = new WinWindow(_docCardWindow);
-                _regDateWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsDateTimeBox1";
-                _regDate = new WinControl(_regDateWindow);
-                _regDate.SearchProperties[UITestControl.PropertyNames.ControlType] = "DropDown";
-            }
+            _regDateWindow = new WinWindow(_docCardWindow);
+            _regDateWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsDateTimeBox1";
+            _regDate = new WinControl(_regDateWindow);
+            _regDate.SearchProperties[UITestControl.PropertyNames.ControlType] = "DropDown";
         }
 
         private void FindRegNumber()
         {
-            if (_regNumber == null)
-            {
-                _regNumberWindow = new WinWindow(_docCardWindow);
-                _regNumberWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsTextBox1";
-                _regNumber = new WinEdit(_regNumberWindow);
-            }
+            _regNumberWindow = new WinWindow(_docCardWindow);
+            _regNumberWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsTextBox1";
+            _regNumber = new WinEdit(_regNumberWindow);
         }
 
         private void FindDescription()
         {
-            if (_docDescription == null)
-            {
-                _docDescriptionWindow = new WinWindow(_docCardWindow);
-                _docDescriptionWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsTextBox3";
-                _docDescription = new WinEdit(_docDescriptionWindow);
-            }
+            _docDescriptionWindow = new WinWindow(_docCardWindow);
+            _docDescriptionWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "lanDocsTextBox3";
+            _docDescription = new WinEdit(_docDescriptionWindow);
         }
 
 
         private void FindTabManager()
         {
-            if (_tabManager == null)
-            {
-                _tabManager = new WinTabList(_docCardWindow);
-                _tabManager.SearchProperties[WinControl.PropertyNames.ControlName] = "tabManager";
-            }
+            _tabManager = new WinTabList(_docCardWindow);
+            _tabManager.SearchProperties[WinControl.PropertyNames.ControlName] = "tabManager";
         }
 
         private void FindTab(string tabName)
@@ -265,7 +240,6 @@ namespace LanDocsUITest.LanDocs3Client.Locators
             FindTabManager();
             _tab = new WinTabPage(_tabManager);
             _tab.SearchProperties[UITestControl.PropertyNames.Name] = tabName;
-
         }
     }
 }

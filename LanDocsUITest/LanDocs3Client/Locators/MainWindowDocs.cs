@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
@@ -20,7 +19,7 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         {
             _mainDocsCreateBar = mainDocsMenu;
             _createDocButton = new WinButton(_mainDocsCreateBar);
-             Wait();
+            Wait();
         }
 
         /// <summary>
@@ -36,7 +35,7 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         }
 
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
             _createDocButton.SearchProperties[UITestControl.PropertyNames.Name] = "Создать документ";
             return _createDocButton.TryFind();

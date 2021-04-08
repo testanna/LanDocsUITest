@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
+using System;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
 {
@@ -42,14 +42,14 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         public MainGrid MainGrid()
         {
             return new MainGrid(_mainWindow);
-        } 
+        }
 
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
             _mainWindow.SearchProperties.Add(WinControl.PropertyNames.ControlName, "MainWindow");
-            return _mainWindow.TryFind();           
-       
+            return _mainWindow.TryFind();
+
         }
 
 

@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
+using System;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
 {
@@ -58,9 +58,8 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         public MainWindow ClickEnterButton()
         {
             FindEnterButton();
-
             Mouse.Click(_enterButton);
-            
+
             return new MainWindow();
         }
 
@@ -72,13 +71,10 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         }
 
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
-            if (_loginEdit == null)
-            {
-                _loginWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditLogin";
-                _loginEdit = new WinEdit(_loginWindow);
-            }
+            _loginWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditLogin";
+            _loginEdit = new WinEdit(_loginWindow);
 
             return _loginEdit.TryFind();
         }
@@ -86,24 +82,16 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindPasswordEdit()
         {
-            if (_passwordEdit == null)
-            {
-                WinWindow passwordWindow = new WinWindow();
-                passwordWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditPassword";
-                _passwordEdit = new WinEdit(passwordWindow);
-            }
+            WinWindow passwordWindow = new WinWindow();
+            passwordWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "textEditPassword";
+            _passwordEdit = new WinEdit(passwordWindow);
         }
 
         private void FindEnterButton()
         {
-            if (_enterButton == null)
-            {
-                WinWindow enterWindow = new WinWindow();
-                enterWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "btnGo";
-                _enterButton = new WinButton(enterWindow);
-            }
+            WinWindow enterWindow = new WinWindow();
+            enterWindow.SearchProperties[WinControl.PropertyNames.ControlName] = "btnGo";
+            _enterButton = new WinButton(enterWindow);
         }
-
-
     }
 }

@@ -38,7 +38,6 @@ namespace LanDocsUITest.LanDocs3Client.Locators
                     throw new ObjectNotFoundException(ControlName + " не открыто");
                 }
 
-
                count++;
             }
         }
@@ -46,6 +45,6 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         /// <summary>
         /// Метод проверяет существование элемента. 
         /// </summary>
-        protected abstract Boolean IsPresent();
+        protected abstract bool IsPresent();
     }
 }

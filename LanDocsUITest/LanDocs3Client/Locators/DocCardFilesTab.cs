@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
+﻿using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
 {
@@ -36,7 +35,7 @@ namespace LanDocsUITest.LanDocs3Client.Locators
             return _file.TryFind();
         }
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
             _docCardFilesTab.SearchProperties[WinControl.PropertyNames.ControlName] = "gcFiles";
 
@@ -45,12 +44,8 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindFile(string name)
         {
-            if (_file == null)
-            {
-                _file = new WinCell(_docCardFilesTab);
-                _file.SearchProperties[WinCell.PropertyNames.Value] = name;
-            }
-   
+            _file = new WinCell(_docCardFilesTab);
+            _file.SearchProperties[WinCell.PropertyNames.Value] = name;
         }
     }
 }

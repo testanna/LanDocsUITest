@@ -47,20 +47,14 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindAddFilesButton()
         {
-            if (_addFilesButton == null)
-            {
                 _addFilesButton = new WinButton(_docFilesMenu);
                 _addFilesButton.SearchProperties[UITestControl.PropertyNames.Name] = "Добавить";
-            }
         }
 
         private void FindAddFileItem()
         {
-            if (_addFileItem == null)
-            {
                 _addFileItem = new WinButton(_addFilesButton);
                 _addFileItem.SearchProperties[UITestControl.PropertyNames.Name] = "Файл";
-            }
         }
 
 

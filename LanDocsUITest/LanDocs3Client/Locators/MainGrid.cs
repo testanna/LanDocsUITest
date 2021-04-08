@@ -1,13 +1,13 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
+using System;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
 {
     /// <summary>
     /// Класс для работы со списком объектов в таблице в главном окне.
     /// </summary>
-    class MainGrid: BaseControl
+    class MainGrid : BaseControl
     {
         private readonly WinWindow _mainGrid;
         private WinRow _activeRow;
@@ -47,16 +47,12 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindFirstRow()
         {
-            if (_activeRow == null)
-            {
-                _activeRow = new WinRow(_mainGrid);
-                _activeRow.SearchProperties.Add(UITestControl.PropertyNames.Name, "Строка 1");       
-            }    
+            _activeRow = new WinRow(_mainGrid);
+            _activeRow.SearchProperties.Add(UITestControl.PropertyNames.Name, "Строка 1");
         }
 
         private WinCell FindCellByColumnName(string columnName, WinRow row)
         {
-            if (_cell == null) 
             _cell = new WinCell(row);
             _cell.SearchProperties.Add(new PropertyExpression(UITestControl.PropertyNames.Name,
                 columnName, PropertyExpressionOperator.Contains));

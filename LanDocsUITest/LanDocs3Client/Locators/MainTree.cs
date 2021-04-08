@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
 
 namespace LanDocsUITest.LanDocs3Client.Locators
@@ -29,22 +28,22 @@ namespace LanDocsUITest.LanDocs3Client.Locators
         /// <param name="journalName">
         /// Имя журнала для перехода.
         /// </param>
-        public void GoToJournal(string journalName)          
+        public void GoToJournal(string journalName)
         {
             FindDocsCell();
             Mouse.DoubleClick(_docsCell);
 
             FindRegistrationJournals();
-            Mouse.DoubleClick( _registrationJournalsCell);
+            Mouse.DoubleClick(_registrationJournalsCell);
 
             FindJournal(journalName);
             Mouse.Click(_journalCell);
         }
 
 
-        protected override Boolean IsPresent()
+        protected override bool IsPresent()
         {
-            
+
             _mainTree.SearchProperties.Add(WinControl.PropertyNames.ControlName, "_tree");
             return _mainTree.TryFind();
 
@@ -53,31 +52,22 @@ namespace LanDocsUITest.LanDocs3Client.Locators
 
         private void FindDocsCell()
         {
-            if (_docsCell != null) return;
-            {
-                _docsCell = new WinCell(_mainTree);
-                _docsCell.SearchProperties[WinCell.PropertyNames.Value] = "Документы";
-            }
+            _docsCell = new WinCell(_mainTree);
+            _docsCell.SearchProperties[WinCell.PropertyNames.Value] = "Документы";
         }
 
         private void FindRegistrationJournals()
         {
             FindDocsCell();
-            if (_registrationJournalsCell == null)
-            {
-                _registrationJournalsCell = new WinCell(_mainTree);
-                _registrationJournalsCell.SearchProperties["Value"] = "Журналы регистрации";
-            }
+            _registrationJournalsCell = new WinCell(_mainTree);
+            _registrationJournalsCell.SearchProperties["Value"] = "Журналы регистрации";
         }
 
         private void FindJournal(string journalName)
         {
             FindRegistrationJournals();
-            if (_journalCell == null)
-            {
-                _journalCell = new WinCell(_mainTree);
-                _journalCell.SearchProperties["Value"] = journalName;
-            }
+            _journalCell = new WinCell(_mainTree);
+            _journalCell.SearchProperties["Value"] = journalName;
         }
     }
 }
